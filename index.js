@@ -21,6 +21,10 @@ app.get("/api", (req,res) => {
     )
 })
 
+app.use("/",(req,res) => {
+    res.send("server is working")
+})
+
 app.use("/api/users", userRoute)
 app.use("/api/products", productRoute)
 app.use("/api/orders", orderRoute)
